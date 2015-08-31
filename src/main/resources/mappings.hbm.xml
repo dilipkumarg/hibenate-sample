@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28 Aug, 2015 3:59:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="com.dilipkumarg.test">
+    <class name="User" table="USER" catalog="HIBERNATE_SAMPLE" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" length="20"/>
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="20"/>
+        </property>
+        <property name="lastnameNew" type="string">
+            <column name="lastnameNew" length="20"/>
+        </property>
+    </class>
+    <class name="Person" table="PERSON" catalog="HIBERNATE_SAMPLE" optimistic-lock="version">
+        <id name="id" type="g">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="firstName" type="string">
+            <column name="firstName" length="20"/>
+        </property>
+        <property name="lastname" type="int">
+            <column name="lastname" />
+        </property>
+        <property name="newProperty" type="string">
+            <column name="newProperty" length="20"/>
+        </property>
+    </class>
+    <class name="TableName" table="TABLE_NAME" catalog="HIBERNATE_SAMPLE" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="30"/>
+        </property>
+    </class>
+</hibernate-mapping>

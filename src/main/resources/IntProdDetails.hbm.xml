@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Nov, 2015 9:51:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="IntProdDetails" table="INT_PROD_DETAILS" catalog="comptest" optimistic-lock="version">
+        <composite-id name="id" class="IntProdDetailsId">
+            <key-property name="detCountId" type="int">
+                <column name="DET_COUNT_ID" />
+            </key-property>
+            <key-property name="detProdId" type="int">
+                <column name="DET_PROD_ID" />
+            </key-property>
+        </composite-id>
+        <one-to-one name="intProducts" class="IntProducts" constrained="true"></one-to-one>
+        <property name="address" type="string">
+            <column name="ADDRESS" />
+        </property>
+        <property name="vendor" type="string">
+            <column name="VENDOR" />
+        </property>
+    </class>
+</hibernate-mapping>

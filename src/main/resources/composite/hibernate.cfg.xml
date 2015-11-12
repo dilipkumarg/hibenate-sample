@@ -7,21 +7,24 @@
         <property name="hibernate.dialect">
             org.hibernate.dialect.MySQLDialect
         </property>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
 
         <!-- Assume test is the database name -->
         <!-- <property name="hibernate.connection.url">
              jdbc:mysql://localhost:3306/HIBERNATE_SAMPLE
          </property>-->
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/comptest</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/compositetest_target
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            pramati
+        </property>
         <property name="hibernate.show_sql">true</property>
-        <!--
-                <mapping resource="Grid_View.hbm.xml"/>
-        -->
-        <mapping resource="IntProducts.hbm.xml"/>
-        <mapping resource="IntProdDetails.hbm.xml"/>
-        <mapping class="com.dilipkumarg.samples.comptest.IntProductsEntity"/>
-        <mapping resource="comptest.hbm.xml"/>
-        <mapping class="com.dilipkumarg.samples.comptest.IntProdDetailsEntity"/>
+        <mapping resource="/composite/CompositeTable.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

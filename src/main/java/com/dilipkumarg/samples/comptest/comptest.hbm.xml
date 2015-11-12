@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.dilipkumarg.samples.comptest.IntProductsEntity" table="INT_PRODUCTS" schema="comptest">
+        <composite-id mapped="true" class="com.dilipkumarg.samples.comptest.IntProductsEntityPK">
+            <key-property name="prodId" column="PROD_ID"/>
+            <key-property name="countId" column="COUNT_ID"/>
+        </composite-id>
+        <property name="name" column="NAME"/>
+    </class>
+    <class name="com.dilipkumarg.samples.comptest.IntProdDetailsEntity" table="INT_PROD_DETAILS" schema="comptest">
+        <composite-id mapped="true" class="com.dilipkumarg.samples.comptest.IntProdDetailsEntityPK">
+            <key-property name="detProdId" column="DET_PROD_ID"/>
+            <key-property name="detCountId" column="DET_COUNT_ID"/>
+        </composite-id>
+        <property name="address" column="ADDRESS"/>
+        <property name="vendor" column="VENDOR"/>
+    </class>
+</hibernate-mapping>

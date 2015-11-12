@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 Nov, 2015 4:16:59 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="com.dilipkumarg">
+    <class entity-name="com.dilipkumarg.CompositeTable" table="composite_table">
+        <composite-id name="id" class="CompositeTableId">
+            <key-property name="id1" type="int">
+                <column name="id_1" />
+            </key-property>
+            <key-property name="id2" type="int">
+                <column name="id_2" />
+            </key-property>
+        </composite-id>
+        <property name="name" type="string">
+            <column name="name" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

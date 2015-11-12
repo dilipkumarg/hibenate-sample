@@ -29,7 +29,7 @@ public class DBExporter {
         final Properties properties = new Properties();
         properties.load(HbmExporter.class.getResourceAsStream("/hbm.properties"));
         configuration.setProperties(properties);
-        configuration.addInputStream(HbmExporter.class.getResourceAsStream("/mappings.hbm.xml"));
+        configuration.addInputStream(HbmExporter.class.getResourceAsStream("/composite/CompositeTable.hbm.xml"));
 
         exporter.export(configuration);
     }

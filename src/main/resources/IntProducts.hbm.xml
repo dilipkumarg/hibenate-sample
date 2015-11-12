@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Nov, 2015 9:51:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="IntProducts" table="INT_PRODUCTS" catalog="comptest" optimistic-lock="version">
+        <composite-id name="id" class="IntProductsId">
+            <key-property name="countId" type="int">
+                <column name="COUNT_ID" />
+            </key-property>
+            <key-property name="prodId" type="int">
+                <column name="PROD_ID" />
+            </key-property>
+        </composite-id>
+        <property name="name" type="string">
+            <column name="NAME" />
+        </property>
+        <one-to-one name="intProdDetails" class="IntProdDetails"></one-to-one>
+    </class>
+</hibernate-mapping>
